@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+
+ext {
+    // required for 'android-setup-custom-ndk-build.gradle'
+    ndkProjectCodeRootDir = file('./src/main/jni').absolutePath
+}
+
+apply from: '../common/android-setup-custom-ndk-build.gradle'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'consumer-proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+        }
+    }
+}
