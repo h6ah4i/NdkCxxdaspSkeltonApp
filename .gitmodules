@@ -1,3 +1,3 @@
 [submodule "ndklibrary/src/main/thirdparty/cxxdasp"]
 	path = ndklibrary/src/main/thirdparty/cxxdasp
-	url = git@github.com:h6ah4i/cxxdasp.git
+	url = https://github.com/h6ah4i/cxxdasp.git
