@@ -12,7 +12,7 @@ Please check the [WiKi of cxxdasp](https://github.com/h6ah4i/cxxdasp/wiki/gettin
 
   ```bash
   # clone this repository
-  git clone git@github.com:h6ah4i/NdkCxxdaspSkeltonApp.git
+  git clone https://github.com/h6ah4i/NdkCxxdaspSkeltonApp.git
   cd NdkCxxdaspSkeltonApp
 
   # clone submodule project (cxxdasp)
