@@ -36,7 +36,7 @@ android {
     }
 
     sourceSets.main {
-        jni.srcDirs = [] //disable automatic ndk-build call
+//         jni.srcDirs = [] // disable automatic ndk-build call
     }
 
     task ndkBuildReleaseNonJniDebuggable(type: Exec) {
@@ -85,6 +85,13 @@ android {
 
         executable ndkBuildCommandFullPath
         args '-C', ndkProjectCodeRootDir, 'clean', "NDK_OUT=${objDir}", "NDK_LIBS_OUT=${libDir}"
+    }
+
+    tasks.whenTaskAdded { task ->
+        // disable automatic ndk-build call
+        if (task.name.indexOf("Ndk") != -1) {
+            task.enabled = false
+        }
     }
 
     tasks.withType(JavaCompile) {
